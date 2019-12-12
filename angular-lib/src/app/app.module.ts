@@ -8,6 +8,7 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { ExpandableListviewComponent } from './components/expandable-listview/expandable-listview.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
     TabsComponent,
     ExpandableListviewComponent,
     TooltipComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
