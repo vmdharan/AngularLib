@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Observable, Subject, Subscription, timer } from 'rxjs';
-import { repeatWhen, switchMap, takeUntil } from 'rxjs/operators';
+import { Observable, timer } from 'rxjs';
 
 @Component({
   selector: 'app-progress-bar',
@@ -13,8 +11,6 @@ export class ProgressBarComponent implements OnInit {
   progressBlue = 0;
   progressGreen = 20;
   progressRed = 40;
-
-  subscription: Subscription;
 
   constructor() { }
 
