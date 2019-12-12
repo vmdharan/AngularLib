@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { ExpandableListviewComponent } from './components/expandable-listview/expandable-listview.component';
+import { TooltipComponent } from './components/tooltip/tooltip.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabsComponent,
-    ExpandableListviewComponent
+    ExpandableListviewComponent,
+    TooltipComponent
   ],
   imports: [
     BrowserModule,

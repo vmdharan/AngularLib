@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
 
 export class ELVStructure {
   public id: number;

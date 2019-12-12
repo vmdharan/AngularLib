@@ -1,0 +1,21 @@
+<div style="text-align: center; margin-left: 248px; margin-top: 48px; display: inline-block; position: relative"
+    (mouseenter)="showTooltip(e)" (mouseleave)="hideTooltip(e)">
+    <div>This text has a tooltip</div>
+
+    <ng-container *ngIf='tooltip.position == "bottom"'>
+        <span class="tooltip tooltip-bottom" [class.tooltip-hidden]="!tooltip.show">{{tooltip.text}}</span>
+    </ng-container>
+
+    <ng-container *ngIf='tooltip.position == "top"'>
+        <span class="tooltip tooltip-top" [class.tooltip-hidden]="!tooltip.show">{{tooltip.text}}</span>
+    </ng-container>
+
+    <ng-container *ngIf='tooltip.position == "left"'>
+        <span class="tooltip tooltip-left" [class.tooltip-hidden]="!tooltip.show">{{tooltip.text}}</span>
+    </ng-container>
+
+    <ng-container *ngIf='tooltip.position == "right"'>
+        <span class="tooltip tooltip-right" [class.tooltip-hidden]="!tooltip.show">{{tooltip.text}}</span>
+    </ng-container>
+
+</div>
