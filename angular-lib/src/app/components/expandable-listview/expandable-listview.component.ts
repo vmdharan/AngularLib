@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
 
 export class ELVStructure {
   public id: number;
@@ -10,6 +12,20 @@ export class ELVStructure {
 @Component({
   selector: 'app-elv',
   templateUrl: './expandable-listview.component.html',
+  animations: [
+    trigger('openClose', [
+      state('open', style({
+        height: '100px',
+        opacity: 1,
+      })),
+      state('closed', style({
+        height: '0px',
+        opacity: 0,
+      })),
+      transition('open => closed', animate('0.2s')),
+      transition('closed => open', animate('0.2s'))
+    ])
+  ],
   styleUrls: ['./expandable-listview.component.scss']
 })
 export class ExpandableListviewComponent implements OnInit {
@@ -28,7 +44,7 @@ export class ExpandableListviewComponent implements OnInit {
   }
 
   viewList(e, tabId) {
-    this.elv.forEach(f => f.show = false);
-    this.elv.find(t => t.id == tabId).show = true;
+    let currentTab = this.elv.find(t => t.id == tabId);
+    currentTab.show = !currentTab.show;
   }
 }

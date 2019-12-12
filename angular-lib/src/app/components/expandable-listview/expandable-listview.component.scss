@@ -35,6 +35,8 @@
 
 .elv-hidden {
     display: none;
+    height: 0;
+    transition: 0.5s ease-out;
 }
 
 .elv-section {
@@ -43,4 +45,5 @@
     background-color: #fafafa;
     border: none;
     outline: none;
+    transition: 2s ease-out;
 }
