@@ -1,12 +1,14 @@
-<div class="tab-container-header">
+<div style="width: 800px;">
+    <div class="tab-container-header">
+        <ng-container *ngFor="let tab of tabs">
+            <button class="tab-links" (click)="viewTab(e, tab.id)">{{tab.header}}</button>
+        </ng-container>
+    </div>
+
     <ng-container *ngFor="let tab of tabs">
-        <button class="tab-links" (click)="viewTab(e, tab.id)">{{tab.header}}</button>
+        <div id="tab_{{tab.id}}" [class.tabs-hidden]="!tab.show" class="tab-section">
+            <div class="tab-header">{{tab.header}}</div>
+            <div class="tab-content">{{tab.content}}</div>
+        </div>
     </ng-container>
 </div>
-
-<ng-container *ngFor="let tab of tabs">
-    <div id="tab_{{tab.id}}" [class.tabs-hidden]="!tab.show" class="tab-section">
-        <div class="tab-header">{{tab.header}}</div>
-        <div class="tab-content">{{tab.content}}</div>
-    </div>
-</ng-container>
