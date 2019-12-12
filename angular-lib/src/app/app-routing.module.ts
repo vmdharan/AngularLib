@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { ExpandableListviewComponent } from './components/expandable-listview/expandable-listview.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'app-tabs', component: TabsComponent },
   { path: 'app-elv', component: ExpandableListviewComponent },
   { path: 'app-tooltip', component: TooltipComponent },
+  { path: 'app-loading-spinner', component: LoadingSpinnerComponent },
 ];
 
 @NgModule({

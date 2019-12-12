@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { ExpandableListviewComponent } from './components/expandable-listview/expandable-listview.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabsComponent,
     ExpandableListviewComponent,
-    TooltipComponent
+    TooltipComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,

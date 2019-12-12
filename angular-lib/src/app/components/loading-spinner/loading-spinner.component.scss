@@ -1,0 +1,124 @@
+// Progress bar 1
+$pb1_angle: 30deg;
+
+$gFillColor0: #00ef34;
+$gFillColor1: #01de34;
+$gFillColor2: #02cd34;
+$gFillColor3: #03bc34;
+$gFillColor4: #04b534;
+$gFillColor5: #05ab34;
+$gFillColor6: #06a534;
+$gFillColor7: #079a34;
+$gFillColor8: #089534;
+$gFillColor9: #098934;
+$gFillColor10: #0c883d;
+$gFillColor11: #069747;
+
+$rFillColor0: #ef0034;
+$rFillColor1: #de0134;
+$rFillColor2: #cd0234;
+$rFillColor3: #bc0334;
+$rFillColor4: #b50434;
+$rFillColor5: #ab0534;
+$rFillColor6: #a50634;
+$rFillColor7: #9a0734;
+$rFillColor8: #950834;
+$rFillColor9: #890934;
+$rFillColor10: #780a34;
+$rFillColor11: #670b34;
+
+$bFillColor0: #3400ef;
+$bFillColor1: #3401de;
+$bFillColor2: #3402cd;
+$bFillColor3: #3403bc;
+$bFillColor4: #3404b5;
+$bFillColor5: #3405ab;
+$bFillColor6: #3406a5;
+$bFillColor7: #34079a;
+$bFillColor8: #340895;
+$bFillColor9: #340989;
+$bFillColor10: #340a78;
+$bFillColor11: #340b67;
+
+$gFillColors: $gFillColor0, $gFillColor1, $gFillColor2, $gFillColor3,
+            $gFillColor4, $gFillColor5, $gFillColor6, $gFillColor7,
+            $gFillColor8, $gFillColor9, $gFillColor10, $gFillColor11;
+
+$rFillColors: $rFillColor0, $rFillColor1, $rFillColor2, $rFillColor3,
+            $rFillColor4, $rFillColor5, $rFillColor6, $rFillColor7,
+            $rFillColor8, $rFillColor9, $rFillColor10, $rFillColor11;
+
+$bFillColors: $bFillColor0, $bFillColor1, $bFillColor2, $bFillColor3,
+            $bFillColor4, $bFillColor5, $bFillColor6, $bFillColor7,
+            $bFillColor8, $bFillColor9, $bFillColor10, $bFillColor11;
+
+
+$pb1_animate_seconds: 3.142s;
+
+.pb1_arc_angle {
+    transform: rotate($pb1_angle);
+    -webkit-transform: rotate($pb1_angle);
+    transform-origin: center 29px;
+    -webkit-transform-origin: center 29px;
+
+    width: 5px;
+    height: 16px;
+    background: #52535e;
+    border-radius: 5px;
+}
+
+.pb1_arc_spin {
+    margin: 40px;
+    animation: spin $pb1_animate_seconds linear infinite;
+    -webkit-animation: spin $pb1_animate_seconds linear infinite;
+    transform-origin: center 29px;
+    -webkit-transform-origin: center 29px;
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@for $i from 1 through 12 {
+    $i2: $i - 1;
+    .pb1_arc_fill_green#{$i2} {
+        background: nth($gFillColors, $i);
+    }
+}
+
+@for $j from 1 through 12 {
+    $j2: $j - 1;
+    .pb1_arc_fill_red#{$j2} {
+        background: nth($rFillColors, $j);
+    }
+}
+
+@for $k from 1 through 12 {
+    $k2: $k - 1;
+    .pb1_arc_fill_blue#{$k2} {
+        background: nth($bFillColors, $k);
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex-item {
+    flex: 2;
+}
+
+.dim-body {
+    background: rgba(0, 0, 0, 0.2) !important;
+}
