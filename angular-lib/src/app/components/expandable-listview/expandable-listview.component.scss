@@ -1,0 +1,46 @@
+.elv-header {
+    font-size: 24px;
+    font-weight: bold;
+    background: #f2f2f2;
+    cursor: pointer;
+    padding: 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    text-align: left;
+}
+
+.elv-header:after {
+    content: '\02795';
+    font-size: 12px;
+    float: right;
+    margin-right: 8px;
+}
+
+.elv-header-selected:after {
+    content: '\02796';
+    font-size: 12px;
+    float: right;
+    margin-right: 8px;
+}
+
+.elv-header:hover {
+    background-color: #92e96f;
+}
+
+.elv-content {
+    font-size: 18px;
+}
+
+.elv-hidden {
+    display: none;
+}
+
+.elv-section {
+    overflow: hidden;
+    padding: 16px;
+    background-color: #fafafa;
+    border: none;
+    outline: none;
+}

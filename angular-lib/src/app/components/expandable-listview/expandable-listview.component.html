@@ -1,0 +1,13 @@
+<div style="width: 800px;">
+    <ng-container *ngFor="let lv of elv">
+        <button class="elv-header" (click)="viewList(e, lv.id)" [class.elv-header-selected]="lv.show">{{lv.header}}</button>
+
+        <div id="tab_{{lv.id}}" [class.elv-hidden]="!lv.show" class="elv-section">
+            <div class="elv-content">{{lv.content}}</div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngFor="let lv of elv">
+        
+    </ng-container>
+</div>
