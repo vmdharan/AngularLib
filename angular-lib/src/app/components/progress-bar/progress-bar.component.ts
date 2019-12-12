@@ -22,7 +22,7 @@ export class ProgressBarComponent implements OnInit {
   }
 
   checkProgress(dur) {
-    if(dur<=0) {
+    if((dur<=0) || (this.progressBlue >= 100 && this.progressGreen >= 100 && this.progressRed >= 100)) {
       return;
     }
 
