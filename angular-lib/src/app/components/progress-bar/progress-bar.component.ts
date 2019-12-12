@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable, Subject, Subscription, timer } from 'rxjs';
+import { repeatWhen, switchMap, takeUntil } from 'rxjs/operators';
+
 @Component({
   selector: 'app-progress-bar',
   templateUrl: './progress-bar.component.html',
@@ -11,26 +14,42 @@ export class ProgressBarComponent implements OnInit {
   progressGreen = 20;
   progressRed = 40;
 
+  subscription: Subscription;
+
   constructor() { }
 
   ngOnInit() {
-    for (var i = 0; i < 100000; i++) {
-      this.delay(10).then(any => {
-        if (this.progressBlue != 100) {
-          this.progressBlue += 0.001;
-        }
-        if (this.progressGreen != 100) {
-          this.progressGreen += 0.001;
-        }
-        if (this.progressRed != 100) {
-          this.progressRed += 0.001;
-        }
-      });
-    }
+    var tm = timer(50, 60000);
+    tm.subscribe(t => {
+      this.checkProgress(60000)
+    });
   }
 
-  async delay(ms: number) {
-    await new Promise(resolve => setTimeout(() => resolve(), ms)).then(() => {});
+  checkProgress(dur) {
+    if(dur<=0) {
+      return;
+    }
+
+    var tm = timer(50, dur);
+    tm.subscribe(t => {
+      this.updateProgress();
+      this.checkProgress(dur-50);
+    });
+  }
+
+  updateProgress() : Observable<void> {
+    if (this.progressBlue != 100) {
+      this.progressBlue += 0.5;
+    }
+    if (this.progressGreen != 100) {
+      this.progressGreen += 0.5;
+    }
+    if (this.progressRed != 100) {
+      this.progressRed += 0.5;
+    }
+
+    var res: Observable<void>;
+    return res;
   }
 
 }
