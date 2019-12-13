@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabsComponent } from './components/tabs/tabs.component';
@@ -9,6 +9,7 @@ import { ExpandableListviewComponent } from './components/expandable-listview/ex
 import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,14 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
     ExpandableListviewComponent,
     TooltipComponent,
     LoadingSpinnerComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

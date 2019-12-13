@@ -32,4 +32,8 @@ export class AppComponent {
   loadTT() {
     this.router.navigate(['app-tooltip']);
   }
+
+  loadSlider() {
+    this.router.navigate(['app-slider']);
+  }
 }
