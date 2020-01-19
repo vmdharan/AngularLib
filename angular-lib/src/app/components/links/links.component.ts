@@ -13,6 +13,10 @@ export class LinksComponent implements OnInit {
   ngOnInit() {
   }
 
+  main() {
+    this.router.navigate(['']);
+  }
+
   loadELV() {
     this.router.navigate(['app-elv']);
   }
