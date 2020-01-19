@@ -7,11 +7,12 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { LinksComponent } from './components/links/links.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'app-root', pathMatch: 'full' },
-  { path: 'app-root', component: AppComponent },
+  { path: 'app-links', component: LinksComponent },
   { path: 'app-tabs', component: TabsComponent },
   { path: 'app-elv', component: ExpandableListviewComponent },
   { path: 'app-tooltip', component: TooltipComponent },

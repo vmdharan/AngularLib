@@ -10,6 +10,7 @@ import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { LinksComponent } from './components/links/links.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SliderComponent } from './components/slider/slider.component';
     TooltipComponent,
     LoadingSpinnerComponent,
     ProgressBarComponent,
-    SliderComponent
+    SliderComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,

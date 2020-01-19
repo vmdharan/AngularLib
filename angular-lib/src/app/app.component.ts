@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,31 +8,9 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'angular-lib';
 
-  constructor(private router: Router) {
+  constructor() {
 
   }
 
-  loadELV() {
-    this.router.navigate(['app-elv']);
-  }
 
-  loadPB() {
-    this.router.navigate(['app-progress-bar']);
-  }
-
-  loadSpinner() {
-    this.router.navigate(['app-loading-spinner']);
-  }
-
-  loadTabs() {
-    this.router.navigate(['app-tabs']);
-  }
-
-  loadTT() {
-    this.router.navigate(['app-tooltip']);
-  }
-
-  loadSlider() {
-    this.router.navigate(['app-slider']);
-  }
 }
